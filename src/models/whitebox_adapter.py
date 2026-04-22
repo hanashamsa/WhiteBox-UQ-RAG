@@ -3,15 +3,15 @@ import math
 import numpy as np
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# ============================================================
-# Global model cache (prevents reloading for every query)
-# ============================================================
+
+# Global model cache 
+
 
 _MODEL_CACHE = {}
 
-# ============================================================
+
 # Load model once (GPU optimized)
-# ============================================================
+
 
 def load_hf_model(model_name: str, device="cuda"):
     if model_name in _MODEL_CACHE:
@@ -37,25 +37,25 @@ def load_hf_model(model_name: str, device="cuda"):
     _MODEL_CACHE[model_name] = (model, tokenizer)
     return model, tokenizer
 
-# ============================================================
+
 # Softmax
-# ============================================================
+
 
 def softmax(x):
     e = torch.exp(x - x.max(-1, keepdim=True).values)
     return e / e.sum(-1, keepdim=True)
 
-# ============================================================
+
 # Token entropy
-# ============================================================
+
 
 def compute_token_entropy(logits):
     p = softmax(logits)
     return float(-(p * (p + 1e-20).log()).sum().item())
 
-# ============================================================
+
 # Main generation + extraction
-# ============================================================
+
 
 def generate_and_extract(model_name: str, prompt: str, device="cuda", max_new_tokens=20):
 
@@ -80,9 +80,7 @@ def generate_and_extract(model_name: str, prompt: str, device="cuda", max_new_to
     gen_ids = sequences[0][inputs["input_ids"].shape[1]:]
     gen_text = tokenizer.decode(gen_ids, skip_special_tokens=True)
 
-    # -----------------------------
-    # CLEANING FIX
-    # -----------------------------
+
 
     gen_text = gen_text.strip()
 
