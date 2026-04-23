@@ -6,7 +6,7 @@ Outputs:
   data/squad_faiss_index.idx
   data/squad_meta.json
 
-Does NOT overwrite the existing faiss_index.idx / meta.json.
+
 """
 import json
 import faiss
