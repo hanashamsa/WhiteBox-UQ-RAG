@@ -6,14 +6,7 @@ Run from project root:
     python notebooks/run_analytics.py --model-tag mistral
     python notebooks/run_analytics.py --model-tag qwen
 
-Reads: data/phase1_results_{tag}.jsonl
-Saves: data/phase3_results_{tag}.jsonl
-       data/phase5_results_{tag}.jsonl
-       data/phase6_fusion_lr_{tag}.pkl
-       data/phase4_logprob_hist_{tag}.png
 
-Runs the same analytics as phases 3-7 but parameterised by model tag,
-so you don't have to edit any files when adding a new model.
 """
 import argparse
 import json
