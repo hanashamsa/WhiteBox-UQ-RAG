@@ -11,7 +11,6 @@ The calibrated confidence for a sample is:
 
 Evaluates ECE on the held-out test split (30%) before and after scaling.
 
-No model re-loading. Reads data/phase3_results.jsonl only.
 """
 import json
 import math
