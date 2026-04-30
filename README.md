@@ -97,7 +97,7 @@ AUROC / Calibration / Risk-Coverage
 
 ![Calibration](Results/calibration.png)
 ![Reliability](Results/reliability.png)
-![Risk Coverage](Results/risk_coverage.png)
+
 
 
 ## Dataset
