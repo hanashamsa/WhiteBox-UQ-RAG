@@ -95,8 +95,8 @@ AUROC / Calibration / Risk-Coverage
 
 * `Qwen/Qwen2.5-0.5B-Instruct`
 
-![Calibration](Results/calibration.png)
-![Reliability](Results/reliability.png)
+![Calibration](Results/phase4_logprob_hist.png)
+![Reliability](Results/calibration.png)
 
 
 
@@ -159,6 +159,10 @@ RAG greatly improves QA accuracy, while AUROC remains relatively stable.
 
 High-confidence subsets achieve substantially higher accuracy than full-set answering.
 
+### 5. RAG improves correctness BUT does NOT improve uncertainty signal
+
+
+->     UQ is intrinsic to LM, not retrieval
 ---
 
 ## Evidence Supporting Hypothesis
