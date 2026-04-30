@@ -94,9 +94,9 @@ AUROC / Calibration / Risk-Coverage
 ### No-RAG Ablation
 
 * `Qwen/Qwen2.5-0.5B-Instruct`
-
 ![Calibration](Results/phase4_logprob_hist.png)
-![Reliability](Results/calibration.png)
+![Calibration](Results/phase4_logprob_hist_qwen.png)
+![Calibration](Results/phase4_logprob_hist_qwen_norag.png)
 
 
 
