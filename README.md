@@ -95,7 +95,10 @@ AUROC / Calibration / Risk-Coverage
 
 * `Qwen/Qwen2.5-0.5B-Instruct`
 
----
+![Calibration](Results/calibration.png)
+![Reliability](Results/reliability.png)
+![Risk Coverage](Results/risk_coverage.png)
+
 
 ## Dataset
 
