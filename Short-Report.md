@@ -24,6 +24,9 @@ Determine whether average token log-probability predicts answer correctness acro
 - Cross-model AUROC comparison
 - Calibration and risk-coverage evaluation
 
+![Calibration](Results/phase4_logprob_hist.png)
+![Calibration](Results/phase4_logprob_hist_qwen.png)
+![Calibration](Results/phase4_logprob_hist_qwen_norag.png)
 ## Findings
 
 - Confidence AUROC remained strong across settings
